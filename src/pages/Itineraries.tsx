@@ -9,7 +9,6 @@ const Itineraries = () => {
       id: 1,
       title: "Classic Leh Ladakh",
       duration: "7 Days",
-      price: "₹45,000",
       rating: 4.9,
       image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
       highlights: ["Leh Palace", "Thiksey Monastery", "Pangong Lake", "Nubra Valley"],
@@ -19,7 +18,6 @@ const Itineraries = () => {
       id: 2,
       title: "Adventure Seeker",
       duration: "10 Days",
-      price: "₹75,000",
       rating: 4.8,
       image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
       highlights: ["Khardung La Pass", "River Rafting", "Trekking", "Camping"],
@@ -29,7 +27,6 @@ const Itineraries = () => {
       id: 3,
       title: "Spiritual Journey",
       duration: "12 Days",
-      price: "₹65,000",
       rating: 4.9,
       image: "https://images.unsplash.com/photo-1586339277861-b0b895343ba5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
       highlights: ["Hemis Monastery", "Meditation Sessions", "Prayer Wheels", "Local Ceremonies"],
@@ -39,7 +36,6 @@ const Itineraries = () => {
       id: 4,
       title: "Luxury Ladakh Experience",
       duration: "8 Days",
-      price: "₹95,000",
       rating: 4.9,
       image: "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
       highlights: ["Luxury Camps", "Private Guide", "Gourmet Meals", "Helicopter Ride"],
@@ -49,7 +45,6 @@ const Itineraries = () => {
       id: 5,
       title: "Photography Expedition",
       duration: "9 Days",
-      price: "₹58,000",
       rating: 4.8,
       image: "https://images.unsplash.com/photo-1609137144813-7d9921338f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
       highlights: ["Golden Hour Shoots", "Wildlife Photography", "Landscape Focus", "Expert Guide"],
@@ -59,7 +54,6 @@ const Itineraries = () => {
       id: 6,
       title: "Family Explorer",
       duration: "6 Days",
-      price: "₹38,000",
       rating: 4.7,
       image: "https://images.unsplash.com/photo-1605538883669-825200433431?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
       highlights: ["Family-Friendly Activities", "Cultural Shows", "Easy Treks", "Local Markets"],
@@ -69,7 +63,6 @@ const Itineraries = () => {
       id: 7,
       title: "Bike Tour Expedition",
       duration: "14 Days",
-      price: "₹85,000",
       rating: 4.9,
       image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
       highlights: ["Royal Enfield", "High Passes", "Remote Villages", "Support Vehicle"],
@@ -79,7 +72,6 @@ const Itineraries = () => {
       id: 8,
       title: "Trekking Adventure",
       duration: "11 Days",
-      price: "₹52,000",
       rating: 4.8,
       image: "https://images.unsplash.com/photo-1571115764595-644a1f56a55c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
       highlights: ["Markha Valley Trek", "Stok Kangri Base Camp", "Alpine Lakes", "Mountain Guides"],
@@ -89,7 +81,6 @@ const Itineraries = () => {
       id: 9,
       title: "Winter Wonderland",
       duration: "5 Days",
-      price: "₹42,000",
       rating: 4.6,
       image: "https://images.unsplash.com/photo-1591123120675-6f7686473c18?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
       highlights: ["Frozen Waterfalls", "Snow Leopard Spotting", "Winter Festivals", "Warm Clothing"],
@@ -153,13 +144,10 @@ const Itineraries = () => {
                     {itinerary.description}
                   </p>
                   
-                  <div className="flex items-center justify-between mb-6">
+                  <div className="flex items-center mb-6">
                     <div className="flex items-center text-stone-600">
                       <Clock className="h-4 w-4 mr-2" />
                       <span className="text-sm">{itinerary.duration}</span>
-                    </div>
-                    <div className="text-2xl font-bold text-stone-700">
-                      {itinerary.price}
                     </div>
                   </div>
 

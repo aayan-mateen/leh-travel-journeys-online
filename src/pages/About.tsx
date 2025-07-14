@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Award, Users, Globe, Heart, Mail, Phone } from 'lucide-react';
 
@@ -12,7 +11,7 @@ const About = () => {
 
   const team = [
     {
-      name: "Gulzar Ahmed",
+      name: "Gulzar Hussain",
       role: "Founder & Guide",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
       bio: "Born and raised in Leh, Gulzar has been guiding travelers for over 15 years.",
@@ -20,7 +19,7 @@ const About = () => {
       phone: "+91 94180 12345"
     },
     {
-      name: "Imran Khan",
+      name: "Mohd Imran",
       role: "Adventure Specialist",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
       bio: "High-altitude trekking expert with extensive knowledge of Ladakh's remote regions.",
