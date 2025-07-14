@@ -1,10 +1,12 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Clock, Users, Star, MapPin } from 'lucide-react';
 
 const Itineraries = () => {
   const itineraries = [
     {
+      id: 1,
       title: "Classic Leh Ladakh",
       duration: "7 Days",
       price: "₹45,000",
@@ -14,6 +16,7 @@ const Itineraries = () => {
       description: "Perfect introduction to Ladakh covering major attractions and cultural sites."
     },
     {
+      id: 2,
       title: "Adventure Seeker",
       duration: "10 Days",
       price: "₹75,000",
@@ -23,6 +26,7 @@ const Itineraries = () => {
       description: "Thrilling adventure package with high-altitude passes and outdoor activities."
     },
     {
+      id: 3,
       title: "Spiritual Journey",
       duration: "12 Days",
       price: "₹65,000",
@@ -36,7 +40,7 @@ const Itineraries = () => {
   return (
     <div className="bg-stone-50 min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-96 flex items-center justify-center bg-gradient-to-br from-amber-800 to-stone-700">
+      <section className="relative h-96 flex items-center justify-center bg-gradient-to-br from-stone-800 to-stone-700">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50"
           style={{
@@ -94,7 +98,7 @@ const Itineraries = () => {
                       <Clock className="h-4 w-4 mr-2" />
                       <span className="text-sm">{itinerary.duration}</span>
                     </div>
-                    <div className="text-2xl font-bold text-amber-700">
+                    <div className="text-2xl font-bold text-stone-700">
                       {itinerary.price}
                     </div>
                   </div>
@@ -104,16 +108,19 @@ const Itineraries = () => {
                     <div className="grid grid-cols-2 gap-2">
                       {itinerary.highlights.map((highlight, idx) => (
                         <div key={idx} className="flex items-center text-sm text-stone-600">
-                          <MapPin className="h-3 w-3 mr-2 text-amber-600" />
+                          <MapPin className="h-3 w-3 mr-2 text-stone-600" />
                           {highlight}
                         </div>
                       ))}
                     </div>
                   </div>
 
-                  <button className="w-full bg-stone-800 text-white py-3 text-sm tracking-widest hover:bg-stone-700 transition-colors duration-300">
+                  <Link 
+                    to={`/itinerary/${itinerary.id}`}
+                    className="block w-full bg-stone-800 text-white py-3 text-sm tracking-widest hover:bg-stone-700 transition-colors duration-300 text-center"
+                  >
                     VIEW DETAILS
-                  </button>
+                  </Link>
                 </div>
               </div>
             ))}
@@ -131,9 +138,12 @@ const Itineraries = () => {
             Don't see exactly what you're looking for? Let us create a completely 
             personalized itinerary based on your interests, budget, and travel dates.
           </p>
-          <button className="bg-amber-600 text-white px-8 py-4 text-sm tracking-widest hover:bg-amber-700 transition-colors duration-300">
+          <Link 
+            to="/contact"
+            className="inline-block bg-stone-600 text-white px-8 py-4 text-sm tracking-widest hover:bg-stone-700 transition-colors duration-300"
+          >
             PLAN CUSTOM TRIP
-          </button>
+          </Link>
         </div>
       </section>
     </div>

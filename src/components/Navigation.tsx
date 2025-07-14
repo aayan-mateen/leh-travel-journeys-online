@@ -34,19 +34,13 @@ const Navigation = () => {
                 to={item.path}
                 className={`text-sm tracking-widest transition-colors duration-200 ${
                   isActive(item.path)
-                    ? 'text-amber-700 border-b-2 border-amber-700 pb-1'
+                    ? 'text-stone-700 border-b-2 border-stone-700 pb-1'
                     : 'text-stone-600 hover:text-stone-800'
                 }`}
               >
                 {item.name}
               </Link>
             ))}
-            <Link
-              to="/contact"
-              className="bg-stone-800 text-white px-6 py-2 text-sm tracking-widest hover:bg-stone-700 transition-colors duration-200"
-            >
-              START PLANNING
-            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -67,7 +61,7 @@ const Navigation = () => {
                 to={item.path}
                 className={`block text-sm tracking-widest transition-colors duration-200 ${
                   isActive(item.path)
-                    ? 'text-amber-700'
+                    ? 'text-stone-700'
                     : 'text-stone-600'
                 }`}
                 onClick={() => setIsMenuOpen(false)}
@@ -75,13 +69,6 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
-            <Link
-              to="/contact"
-              className="block bg-stone-800 text-white px-6 py-2 text-sm tracking-widest text-center"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              START PLANNING
-            </Link>
           </div>
         )}
       </div>

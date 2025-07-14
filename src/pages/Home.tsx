@@ -6,17 +6,17 @@ import { ArrowRight, Star, Users, Award } from 'lucide-react';
 const Home = () => {
   const features = [
     {
-      icon: <Star className="h-8 w-8 text-amber-600" />,
+      icon: <Star className="h-8 w-8 text-stone-600" />,
       title: "Exclusive Access",
       description: "Our journeys are defined by personalized experiences that celebrate the precious heritage and cultural traditions of Ladakh. Each moment is carefully designed to provide authentic insight."
     },
     {
-      icon: <Users className="h-8 w-8 text-amber-600" />,
+      icon: <Users className="h-8 w-8 text-stone-600" />,
       title: "Local Experts",
       description: "Our team is composed of seasoned local guides with extensive knowledge of Leh and its hidden gems. We craft compelling, seamless journeys tailored exclusively for you."
     },
     {
-      icon: <Award className="h-8 w-8 text-amber-600" />,
+      icon: <Award className="h-8 w-8 text-stone-600" />,
       title: "Tailored Expeditions",
       description: "Every itinerary is made from scratch, tailored to your particular interests and preferences. From monasteries to mountain passes, we provide 24-hour assistance every step of the journey."
     }
@@ -25,7 +25,7 @@ const Home = () => {
   return (
     <div className="bg-stone-50">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center bg-gradient-to-br from-stone-800 via-stone-700 to-amber-900">
+      <section className="relative h-screen flex items-center justify-center bg-gradient-to-br from-stone-800 via-stone-700 to-stone-600">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-60"
           style={{
@@ -36,17 +36,11 @@ const Home = () => {
           <h1 className="font-serif text-5xl md:text-7xl mb-6 leading-tight">
             Journeys to transcend
             <br />
-            <span className="text-amber-200">boundaries</span>
+            <span className="text-stone-200">boundaries</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-stone-200 max-w-2xl mx-auto">
             Discover the mystical beauty of Ladakh through carefully curated experiences
           </p>
-          <Link
-            to="/itineraries"
-            className="inline-block bg-white text-stone-800 px-8 py-4 text-sm tracking-widest hover:bg-stone-100 transition-colors duration-300"
-          >
-            START PLANNING
-          </Link>
         </div>
       </section>
 
@@ -111,7 +105,7 @@ const Home = () => {
           </p>
           <Link
             to="/contact"
-            className="inline-flex items-center bg-amber-600 text-white px-8 py-4 text-sm tracking-widest hover:bg-amber-700 transition-colors duration-300"
+            className="inline-flex items-center bg-stone-600 text-white px-8 py-4 text-sm tracking-widest hover:bg-stone-700 transition-colors duration-300"
           >
             PLAN YOUR ADVENTURE
             <ArrowRight className="ml-2 h-4 w-4" />
