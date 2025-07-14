@@ -2,6 +2,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Clock, Users, Star, MapPin, Camera, Calendar, CheckCircle, ArrowLeft } from 'lucide-react';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 
 const ItineraryDetails = () => {
   const { id } = useParams();
@@ -23,6 +24,20 @@ const ItineraryDetails = () => {
       "Transportation in Innova/Tempo Traveller",
       "Inner line permits",
       "Sightseeing as per itinerary"
+    ],
+    gallery: [
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1586339277861-b0b895343ba5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1609137144813-7d9921338f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1605538883669-825200433431?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1571115764595-644a1f56a55c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1591123120675-6f7686473c18?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1605538883862-0d3d0b2d6d8d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1578508499146-62ad43cf3e93?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     ],
     itinerary: [
       {
@@ -115,100 +130,86 @@ const ItineraryDetails = () => {
 
       {/* Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-        <div className="grid lg:grid-cols-3 gap-12">
-          {/* Main Content */}
-          <div className="lg:col-span-2 space-y-12">
-            {/* Overview */}
-            <div className="bg-white rounded-lg p-8 shadow-sm">
-              <h2 className="font-serif text-3xl text-stone-800 mb-6">Overview</h2>
-              <p className="text-stone-600 leading-relaxed text-lg">
-                {itinerary.description}
-              </p>
-            </div>
+        <div className="space-y-12">
+          {/* Overview */}
+          <div className="bg-white rounded-lg p-8 shadow-sm">
+            <h2 className="font-serif text-3xl text-stone-800 mb-6">Overview</h2>
+            <p className="text-stone-600 leading-relaxed text-lg">
+              {itinerary.description}
+            </p>
+          </div>
 
-            {/* Detailed Itinerary */}
-            <div className="bg-white rounded-lg p-8 shadow-sm">
-              <h2 className="font-serif text-3xl text-stone-800 mb-8">Detailed Itinerary</h2>
-              <div className="space-y-8">
-                {itinerary.itinerary.map((day, index) => (
-                  <div key={index} className="border-l-4 border-stone-300 pl-6">
-                    <div className="flex items-center mb-3">
-                      <div className="bg-stone-800 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-4">
-                        {day.day}
-                      </div>
-                      <h3 className="font-serif text-xl text-stone-800">{day.title}</h3>
+          {/* Gallery */}
+          <div className="bg-white rounded-lg p-8 shadow-sm">
+            <h2 className="font-serif text-3xl text-stone-800 mb-8">Photo Gallery</h2>
+            <Carousel className="w-full">
+              <CarouselContent className="-ml-4">
+                {itinerary.gallery.map((image, index) => (
+                  <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                    <div className="aspect-square rounded-lg overflow-hidden">
+                      <img
+                        src={image}
+                        alt={`Gallery image ${index + 1}`}
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                      />
                     </div>
-                    <p className="text-stone-600 mb-4">{day.description}</p>
-                    <div className="grid md:grid-cols-2 gap-2">
-                      {day.activities.map((activity, idx) => (
-                        <div key={idx} className="flex items-center text-sm text-stone-600">
-                          <CheckCircle className="h-4 w-4 mr-2 text-stone-500" />
-                          {activity}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
+                  </CarouselItem>
                 ))}
-              </div>
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
+          </div>
+
+          {/* What's Included */}
+          <div className="bg-white rounded-lg p-8 shadow-sm">
+            <h3 className="font-serif text-2xl text-stone-800 mb-6">What's Included</h3>
+            <div className="grid md:grid-cols-2 gap-4">
+              {itinerary.included.map((item, index) => (
+                <div key={index} className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-stone-600 mr-3 mt-0.5 flex-shrink-0" />
+                  <span className="text-stone-600">{item}</span>
+                </div>
+              ))}
             </div>
           </div>
 
-          {/* Sidebar */}
-          <div className="space-y-8">
-            {/* Booking Card */}
-            <div className="bg-white rounded-lg p-6 shadow-sm sticky top-6">
-              <div className="text-center mb-6">
-                <div className="text-3xl font-bold text-stone-800 mb-2">{itinerary.price}</div>
-                <div className="text-stone-600">per person</div>
-              </div>
-              
-              <div className="space-y-4 mb-6">
-                <div className="flex items-center justify-between">
-                  <span className="text-stone-600">Duration</span>
-                  <span className="font-medium">{itinerary.duration}</span>
+          {/* Highlights */}
+          <div className="bg-white rounded-lg p-8 shadow-sm">
+            <h3 className="font-serif text-2xl text-stone-800 mb-6">Highlights</h3>
+            <div className="grid md:grid-cols-2 gap-4">
+              {itinerary.highlights.map((highlight, index) => (
+                <div key={index} className="flex items-center">
+                  <MapPin className="h-5 w-5 text-stone-600 mr-3 flex-shrink-0" />
+                  <span className="text-stone-600">{highlight}</span>
                 </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-stone-600">Group Size</span>
-                  <span className="font-medium">2-12 people</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-stone-600">Rating</span>
-                  <div className="flex items-center">
-                    <Star className="h-4 w-4 text-yellow-500 mr-1" />
-                    <span className="font-medium">{itinerary.rating}</span>
-                  </div>
-                </div>
-              </div>
-
-              <button className="w-full bg-stone-800 text-white py-3 rounded-lg text-sm tracking-widest hover:bg-stone-700 transition-colors duration-300">
-                BOOK NOW
-              </button>
+              ))}
             </div>
+          </div>
 
-            {/* What's Included */}
-            <div className="bg-white rounded-lg p-6 shadow-sm">
-              <h3 className="font-serif text-xl text-stone-800 mb-4">What's Included</h3>
-              <div className="space-y-2">
-                {itinerary.included.map((item, index) => (
-                  <div key={index} className="flex items-start">
-                    <CheckCircle className="h-4 w-4 text-stone-600 mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-stone-600 text-sm">{item}</span>
+          {/* Detailed Itinerary */}
+          <div className="bg-white rounded-lg p-8 shadow-sm">
+            <h2 className="font-serif text-3xl text-stone-800 mb-8">Detailed Itinerary</h2>
+            <div className="space-y-8">
+              {itinerary.itinerary.map((day, index) => (
+                <div key={index} className="border-l-4 border-stone-300 pl-6">
+                  <div className="flex items-center mb-3">
+                    <div className="bg-stone-800 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-4">
+                      {day.day}
+                    </div>
+                    <h3 className="font-serif text-xl text-stone-800">{day.title}</h3>
                   </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Highlights */}
-            <div className="bg-white rounded-lg p-6 shadow-sm">
-              <h3 className="font-serif text-xl text-stone-800 mb-4">Highlights</h3>
-              <div className="space-y-2">
-                {itinerary.highlights.map((highlight, index) => (
-                  <div key={index} className="flex items-center">
-                    <MapPin className="h-4 w-4 text-stone-600 mr-3 flex-shrink-0" />
-                    <span className="text-stone-600 text-sm">{highlight}</span>
+                  <p className="text-stone-600 mb-4">{day.description}</p>
+                  <div className="grid md:grid-cols-2 gap-2">
+                    {day.activities.map((activity, idx) => (
+                      <div key={idx} className="flex items-center text-sm text-stone-600">
+                        <CheckCircle className="h-4 w-4 mr-2 text-stone-500" />
+                        {activity}
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

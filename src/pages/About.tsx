@@ -34,7 +34,7 @@ const About = () => {
   return (
     <div className="bg-stone-50 min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-96 flex items-center justify-center bg-gradient-to-br from-stone-700 to-amber-800">
+      <section className="relative h-96 flex items-center justify-center bg-gradient-to-br from-stone-700 to-stone-800">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50"
           style={{
@@ -76,21 +76,21 @@ const About = () => {
             </div>
             <div className="space-y-6">
               <div className="flex items-start">
-                <Heart className="h-6 w-6 text-amber-600 mr-4 mt-1" />
+                <Heart className="h-6 w-6 text-stone-600 mr-4 mt-1" />
                 <div>
                   <h3 className="font-serif text-xl text-stone-800 mb-2">Authentic Experiences</h3>
                   <p className="text-stone-600">We create genuine connections between travelers and local communities.</p>
                 </div>
               </div>
               <div className="flex items-start">
-                <Globe className="h-6 w-6 text-amber-600 mr-4 mt-1" />
+                <Globe className="h-6 w-6 text-stone-600 mr-4 mt-1" />
                 <div>
                   <h3 className="font-serif text-xl text-stone-800 mb-2">Sustainable Tourism</h3>
                   <p className="text-stone-600">Our practices support local communities and preserve the environment.</p>
                 </div>
               </div>
               <div className="flex items-start">
-                <Award className="h-6 w-6 text-amber-600 mr-4 mt-1" />
+                <Award className="h-6 w-6 text-stone-600 mr-4 mt-1" />
                 <div>
                   <h3 className="font-serif text-xl text-stone-800 mb-2">Expert Knowledge</h3>
                   <p className="text-stone-600">Local expertise ensures you discover hidden gems and cultural insights.</p>
@@ -107,7 +107,7 @@ const About = () => {
           <div className="grid md:grid-cols-4 gap-8 text-center">
             {stats.map((stat, index) => (
               <div key={index}>
-                <div className="font-serif text-4xl text-amber-700 mb-2">
+                <div className="font-serif text-4xl text-stone-700 mb-2">
                   {stat.number}
                 </div>
                 <div className="text-stone-600 tracking-widest uppercase text-sm">
@@ -143,7 +143,7 @@ const About = () => {
                 <h3 className="font-serif text-2xl text-stone-800 mb-2">
                   {member.name}
                 </h3>
-                <p className="text-amber-600 mb-4 tracking-widest uppercase text-sm">
+                <p className="text-stone-600 mb-4 tracking-widest uppercase text-sm">
                   {member.role}
                 </p>
                 <p className="text-stone-600 leading-relaxed">
