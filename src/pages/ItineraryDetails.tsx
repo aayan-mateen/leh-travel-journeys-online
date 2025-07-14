@@ -2,7 +2,6 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Clock, Users, Star, MapPin, Camera, Calendar, CheckCircle, ArrowLeft } from 'lucide-react';
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 
 const ItineraryDetails = () => {
   const { id } = useParams();
@@ -24,20 +23,6 @@ const ItineraryDetails = () => {
       "Transportation in Innova/Tempo Traveller",
       "Inner line permits",
       "Sightseeing as per itinerary"
-    ],
-    gallery: [
-      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1586339277861-b0b895343ba5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1609137144813-7d9921338f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1605538883669-825200433431?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1571115764595-644a1f56a55c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1591123120675-6f7686473c18?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1605538883862-0d3d0b2d6d8d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1578508499146-62ad43cf3e93?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     ],
     itinerary: [
       {
@@ -137,28 +122,6 @@ const ItineraryDetails = () => {
             <p className="text-stone-600 leading-relaxed text-lg">
               {itinerary.description}
             </p>
-          </div>
-
-          {/* Gallery */}
-          <div className="bg-white rounded-lg p-8 shadow-sm">
-            <h2 className="font-serif text-3xl text-stone-800 mb-8">Photo Gallery</h2>
-            <Carousel className="w-full">
-              <CarouselContent className="-ml-4">
-                {itinerary.gallery.map((image, index) => (
-                  <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
-                    <div className="aspect-square rounded-lg overflow-hidden">
-                      <img
-                        src={image}
-                        alt={`Gallery image ${index + 1}`}
-                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                      />
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
-            </Carousel>
           </div>
 
           {/* What's Included */}

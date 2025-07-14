@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Award, Users, Globe, Heart } from 'lucide-react';
+import { Award, Users, Globe, Heart, Mail, Phone } from 'lucide-react';
 
 const About = () => {
   const stats = [
@@ -12,22 +12,20 @@ const About = () => {
 
   const team = [
     {
-      name: "Tenzin Norbu",
+      name: "Gulzar Ahmed",
       role: "Founder & Guide",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      bio: "Born and raised in Leh, Tenzin has been guiding travelers for over 15 years."
+      bio: "Born and raised in Leh, Gulzar has been guiding travelers for over 15 years.",
+      email: "gulzar@lehwanderer.com",
+      phone: "+91 94180 12345"
     },
     {
-      name: "Dolma Angmo",
-      role: "Cultural Expert",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b332e234?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      bio: "Local historian specializing in Buddhist culture and Ladakhi traditions."
-    },
-    {
-      name: "Stanzin Dorje",
+      name: "Imran Khan",
       role: "Adventure Specialist",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      bio: "High-altitude trekking expert with extensive knowledge of Ladakh's remote regions."
+      bio: "High-altitude trekking expert with extensive knowledge of Ladakh's remote regions.",
+      email: "imran@lehwanderer.com",
+      phone: "+91 94180 67890"
     }
   ];
 
@@ -132,9 +130,9 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
             {team.map((member, index) => (
-              <div key={index} className="text-center">
+              <div key={index} className="text-center bg-stone-50 rounded-lg p-8">
                 <img
                   src={member.image}
                   alt={member.name}
@@ -146,9 +144,25 @@ const About = () => {
                 <p className="text-stone-600 mb-4 tracking-widest uppercase text-sm">
                   {member.role}
                 </p>
-                <p className="text-stone-600 leading-relaxed">
+                <p className="text-stone-600 leading-relaxed mb-6">
                   {member.bio}
                 </p>
+                
+                {/* Contact Information */}
+                <div className="space-y-3">
+                  <div className="flex items-center justify-center text-stone-600">
+                    <Mail className="h-4 w-4 mr-2" />
+                    <a href={`mailto:${member.email}`} className="hover:text-stone-800 transition-colors">
+                      {member.email}
+                    </a>
+                  </div>
+                  <div className="flex items-center justify-center text-stone-600">
+                    <Phone className="h-4 w-4 mr-2" />
+                    <a href={`tel:${member.phone}`} className="hover:text-stone-800 transition-colors">
+                      {member.phone}
+                    </a>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
