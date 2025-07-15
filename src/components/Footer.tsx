@@ -11,7 +11,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <Link to="/" className="flex flex-col">
-              <span className="font-serif text-2xl text-white tracking-wide">leh wanderer</span>
+              <span className="font-serif text-2xl text-white tracking-wide">frozen himalayas</span>
               <span className="text-sm text-stone-400 tracking-widest uppercase">curated journeys</span>
             </Link>
             <p className="text-stone-400 leading-relaxed">
@@ -64,7 +64,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-stone-400" />
-                <span className="text-stone-400">info@lehwanderer.com</span>
+                <span className="text-stone-400">info@frozenhimalayas.com</span>
               </div>
             </div>
           </div>
@@ -72,7 +72,7 @@ const Footer = () => {
 
         <div className="border-t border-stone-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-stone-400 text-sm">
-            © 2024 Leh Wanderer. All rights reserved.
+            © 2024 Frozen Himalayas. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link to="#" className="text-stone-400 hover:text-white text-sm transition-colors">Privacy Policy</Link>

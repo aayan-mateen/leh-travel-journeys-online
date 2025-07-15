@@ -1,6 +1,8 @@
 
 import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import FAQSection from '../components/FAQSection';
+import MapSection from '../components/MapSection';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -47,7 +49,7 @@ const Contact = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20">
+      <section className="py-20" id="contact-form">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Contact Form */}
@@ -198,8 +200,8 @@ const Contact = () => {
                     <div>
                       <p className="font-medium text-stone-800">Email Us</p>
                       <p className="text-stone-600">
-                        info@lehwanderer.com<br />
-                        bookings@lehwanderer.com
+                        info@frozenhimalayas.com<br />
+                        bookings@frozenhimalayas.com
                       </p>
                     </div>
                   </div>
@@ -233,6 +235,12 @@ const Contact = () => {
           </div>
         </div>
       </section>
+
+      {/* Map Section */}
+      <MapSection />
+
+      {/* FAQ Section */}
+      <FAQSection />
     </div>
   );
 };

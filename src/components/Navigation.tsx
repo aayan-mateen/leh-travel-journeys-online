@@ -24,7 +24,7 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="flex flex-col items-center">
-            <span className="font-serif text-2xl text-stone-800 tracking-wide">leh wanderer</span>
+            <span className="font-serif text-2xl text-stone-800 tracking-wide">frozen himalayas</span>
             <span className="text-xs text-stone-500 tracking-widest uppercase">curated journeys</span>
           </Link>
 
