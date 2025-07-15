@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Award, Users, Globe, Heart, Mail, Phone } from 'lucide-react';
 
@@ -135,7 +136,7 @@ const About = () => {
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-48 h-48 rounded-full mx-auto mb-6 object-cover shadow-lg"
+                  className="w-72 h-80 rounded-lg mx-auto mb-6 object-cover shadow-lg"
                 />
                 <h3 className="font-serif text-2xl text-stone-800 mb-2">
                   {member.name}
