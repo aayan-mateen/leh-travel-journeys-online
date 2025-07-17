@@ -14,25 +14,39 @@ const MissionCarousel = () => {
 
   const slides: SlideData[] = [
     {
-      title: "Our Mission, Our Land, Our Voice",
-      description: "The Frozen Himalayas is a pioneering travel initiative founded by local experts, an award-winning Indigenous adventure company. Based in one of the world's most ecologically rich but remote regions, we are dedicated to nurturing local storytellers who intimately understand Ladakh's landscapes, wildlife, and culture.",
-      buttonText: "Learn More",
-      image: "/lovable-uploads/d6ce8f93-0e62-48de-9d3b-a95b5a2add02.png",
-      link: "/about"
+      title: "Leh Ladakh Classic",
+      description: "Experience the heart of Ladakh with visits to ancient monasteries, pristine lakes, and the vibrant markets of Leh. This 7-day journey covers Pangong Tso, Nubra Valley, and the iconic Magnetic Hill, perfect for first-time visitors seeking authentic cultural immersion.",
+      buttonText: "View Itinerary",
+      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+      link: "/itineraries"
     },
     {
-      title: "Sustainable Adventure, Authentic Culture",
-      description: "Ladakh is home to rare experiences like ancient monasteries, high-altitude desert landscapes, and the warmth of local communities. But few of these stories are told by those who live here. We are changing that by empowering local guides to become the guardians and narrators of their homeland.",
-      buttonText: "Explore",
+      title: "High Altitude Adventure",
+      description: "For thrill-seekers and adventure enthusiasts, this 10-day expedition takes you through challenging mountain passes, remote villages, and breathtaking landscapes. Include trekking in Markha Valley and camping under the star-studded Ladakhi sky.",
+      buttonText: "Explore Adventure",
       image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-      link: "/destinations"
+      link: "/itineraries"
     },
     {
-      title: "Adventures Beyond Boundaries",
-      description: "From the snow-capped peaks of the Himalayas to the serene monasteries echoing with ancient chants, every journey with us is a step into the soul of Ladakh. We create experiences that transform travelers into storytellers of this magnificent land.",
-      buttonText: "Start Journey",
+      title: "Cultural Heritage Tour",
+      description: "Immerse yourself in Ladakh's rich Buddhist heritage with visits to Hemis, Thiksey, and Diskit monasteries. This 8-day spiritual journey includes meditation sessions, traditional festivals, and interactions with local monks and artisans.",
+      buttonText: "Discover Culture",
       image: "https://images.unsplash.com/photo-1626525095417-abd6b6c2a79c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-      link: "/contact"
+      link: "/itineraries"
+    },
+    {
+      title: "Photography Expedition",
+      description: "Capture the ethereal beauty of Ladakh through your lens with our specially designed photography tour. From golden hour shots at Shanti Stupa to wildlife photography in Hemis National Park, create memories that last a lifetime.",
+      buttonText: "Book Photography Tour",
+      image: "https://images.unsplash.com/photo-1571769929402-4079bfe2c470?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+      link: "/itineraries"
+    },
+    {
+      title: "Winter Wonderland",
+      description: "Experience Ladakh's mystical winter beauty with our exclusive Chadar Trek and winter festivals tour. Walk on the frozen Zanskar River, witness snow-covered monasteries, and participate in traditional winter celebrations with local communities.",
+      buttonText: "Winter Experience",
+      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+      link: "/itineraries"
     }
   ];
 
