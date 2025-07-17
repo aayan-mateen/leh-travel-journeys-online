@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Star, Users, Award } from 'lucide-react';
+import MissionCarousel from '../components/MissionCarousel';
 
 const Home = () => {
   const features = [
@@ -93,6 +94,9 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Mission Carousel */}
+      <MissionCarousel />
 
       {/* Call to Action */}
       <section className="py-20 bg-stone-800 text-white">
